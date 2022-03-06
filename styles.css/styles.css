@@ -46,3 +46,99 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+body{
+    background-color: #D2A1CA;
+}
+
+/***********************
+        DEFAULTS
+***********************/
+.container {
+    max-width: 1000px;
+    background-color: #87489C;
+}
+  body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+}
+
+h1{
+    font-size:2.5rem;
+}
+h2{
+    font-size:2rem;
+}
+h3{
+    font-size:1.5rem;
+}
+
+/***********************
+        MOBILE
+***********************/
+@media screen and (max-width: 480px){
+
+nav{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    }
+nav ul{
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+}
+nav li{    
+    padding:20px;
+}
+nav li a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #A4D4A0;
+}
+nav li a:hover{
+    color:#87489C;
+    background-color: #A4D4A0;
+    padding:1em 3em 1em 3em;
+    border-radius: 20px;
+}
+
+#logo{
+    display:flex;
+}
+}
+
+/***********************
+        TABLET
+***********************/
+@media screen and (min-width: 480px andmax-width: 768px){
+
+    nav{
+        display:flex;
+        padding:20px;
+        
+        }
+    nav ul{
+        width: 100%;
+        padding-top: 20px;
+    }
+    nav li{    
+        padding:20px;
+    }
+    nav li a{
+        text-decoration: none;
+        color: #A4D4A0;
+        display:flex;
+        flex-direction: row;
+    }
+    nav li a:hover{
+        color:#D2A1CA ;
+    }
+    
+    #logo{
+        display:flex;
+    }
+    
+    }
