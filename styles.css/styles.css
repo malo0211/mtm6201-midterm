@@ -47,7 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-
 body{
     background-color: #D2A1CA;
 }
@@ -55,13 +54,20 @@ body{
 /***********************
         DEFAULTS
 ***********************/
-.container {
-    max-width: 1000px;
+.nav-container {
     background-color: #87489C;
+    padding: 0 auto 10px;
 }
-  body{
+
+body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
+}
+
+.container{
+    max-width: 72%;
+    background-color: #A4D4A0;
+    margin: 0 auto 10px;
 }
 
 h1{
@@ -73,7 +79,13 @@ h2{
 h3{
     font-size:1.5rem;
 }
-
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    padding:10px;
+}
 /***********************
         MOBILE
 ***********************/
@@ -81,64 +93,103 @@ h3{
 
 nav{
     display:flex;
-    justify-content:center;
+    justify-content:space-evenly;
     padding:20px;
-    }
+}
 nav ul{
     text-align: center;
-    width: 100%;
     padding-top: 20px;
 }
 nav li{    
     padding:20px;
 }
 nav li a{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.3em;
     text-decoration: none;
     color: #A4D4A0;
 }
 nav li a:hover{
-    color:#87489C;
-    background-color: #A4D4A0;
-    padding:1em 3em 1em 3em;
-    border-radius: 20px;
+    color:#D2A1CA;
 }
 
 #logo{
     display:flex;
 }
 }
-
 /***********************
         TABLET
 ***********************/
-@media screen and (min-width: 480px andmax-width: 768px){
+@media screen and (min-width: 480px) and (max-width: 768px){
 
     nav{
-        display:flex;
         padding:20px;
-        
-        }
-    nav ul{
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end;
+        justify-content: center;
+     }
+    nav ul{
         padding-top: 20px;
+        display: flex;
+        flex-direction: row;
     }
     nav li{    
-        padding:20px;
-    }
-    nav li a{
-        text-decoration: none;
-        color: #A4D4A0;
+        padding:30px;
         display:flex;
         flex-direction: row;
     }
-    nav li a:hover{
-        color:#D2A1CA ;
+    nav li a{
+        font-size: 1.7rem;
+        text-decoration: none;
+        color: #A4D4A0;
     }
-    
+    nav li a:hover{
+        color:#D2A1CA;
+        transform: rotateX(360deg);
+        transition: transform 1s;
+    }
     #logo{
         display:flex;
+        flex:wrap;
     }
-    
+}
+/***********************
+       DESKTOP
+***********************/
+@media screen and (min-width: 768px){
+
+    nav{
+        padding:20px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end;
+        justify-content: center;
+     }
+    nav ul{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+    nav li{    
+        padding:30px;
+        display:flex;
+        flex-direction: row;
+    }
+    nav li a{
+        font-size: 1.7rem;
+        text-decoration: none;
+        color: #A4D4A0;
+    }
+    nav li a:hover{
+        color:#D2A1CA;
+        transform: rotateX(360deg);
+        transition: transform 1s;
+    }
+    #logo{
+        display:flex;
+        flex:wrap;
+    }
+
     }
