@@ -48,14 +48,47 @@ table {
 }
 
 body{
-    background-color: #D2A1CA;
+    background-color:#3B1646;
 }
 
 /***********************
         DEFAULTS
 ***********************/
+
+/****** ABOUT colors
+.about-container{
+    background: green;
+}  
+#cakepop{
+    border: 2px solid orange;
+}
+#about-content{
+    background: white;
+}
+#acco-list{
+    background: gray;
+}
+#about-button{
+    background-color: blue;
+}******/
+/****** CONTACT colors******/
+.contact-container{
+    background: green;
+}
+#contact-info{
+    background: white;
+}
+.form{
+    background:orange;
+}
+
+#socials{
+    background: red;
+}
+/******^^^colors^^^^*****/
+
 .nav-container {
-    background-color: #87489C;
+    background-color: #3B1646;
     padding: 0 auto 10px;
 }
 
@@ -66,13 +99,48 @@ body{
 
 .container{
     max-width: 72%;
-    background-color: #A4D4A0;
     margin: 0 auto 10px;
     padding: 10px;
 }
 
+.about-container{
+    max-width: 72%;
+    margin: 0 auto 10px;
+    padding: 10px;
+}
+.contact-container{
+    max-width: 72%;
+    margin: 0 auto 10px;
+    padding: 10px;
+}
+#logo:hover{
+    animation: rotation .5s infinite linear;
+  }
+   @keyframes rotation {
+ 25% {
+        transform: rotate(-10deg);
+      }
+50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+ 
+}
 #illustration{
     width:100%;
+}
+#home-info{
+    line-height: 30px;
+}
+#tagline{
+    padding:18px 0;
+    text-align:center;
+    font-style: italic;
 }
 
 #cakepop{
@@ -81,12 +149,21 @@ body{
 
 h1{
     font-size:2.5rem;
+    color:#A4D4A0;
 }
 h2{
     font-size:2rem;
+    color:#A4D4A0;
 }
 h3{
     font-size:1.5rem;
+    padding:10px 0;
+    color:#A4D4A0;
+}
+h4{
+    font-size: 1.2rem;
+    padding:10px 0;
+    color:#A4D4A0;
 }
 footer{
     color:#A4D4A0;
@@ -97,23 +174,75 @@ footer{
 }
 
 #button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(to bottom right, #D2A1CA, #87489C);
+    color:#A4D4A0;
     border: 0;
     border-radius: 10px;
-    color:aliceblue;
+    font-size: 16px;
     padding:10px;
-    text-align: center;
     text-decoration: none;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-out;
-    transition-delay: 0.2s;
-}
-#button:hover{
-    background: linear-gradient(to bottom right, #87489C, #D2A1CA);
-    padding: 10px 2em;
+    transition-delay: 0.1s;
+    transform:skew(0,0);
 }
 
+#button:hover{
+    background: linear-gradient(to bottom right, #87489C, #D2A1CA);
+    transform: skew(5deg,-10deg);
+}
+
+#acco-list{
+    list-style-type: circle;
+    display:flex;
+    flex-direction: column;
+    margin-left:20px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 8px 0 14px 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+input[type=submit] {
+    background: linear-gradient(to bottom left, #D2A1CA, #87489C);
+    color:#A4D4A0;
+    font-size:16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.1s;
+    transform:skew(0,0);
+  }
+  
+input[type=submit]:hover {
+    background: linear-gradient(to bottom left, #87489C, #D2A1CA);
+    transform: skew(5deg,-10deg);
+  }
+  
+.form {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 400px;
+  }
+
+#socials{
+    text-align: center;
+}
 /***********************
         MOBILE
 ***********************/
@@ -143,8 +272,23 @@ nav li a:hover{
 #logo{
     display:flex;
 }
+#about-content{
+    height:100%;
+}
+#button{
+    margin:10px 20%;
+}
 
+#contact-info{
+    padding:20px;
+}
 
+#socials{
+    text-align: center;
+}
+#socials svg{
+    width: 50px;
+}
 }
 /***********************
         TABLET
@@ -176,14 +320,16 @@ nav li a:hover{
     }
     nav li a:hover{
         color:#D2A1CA;
-        transform: rotateX(360deg);
-        transition: transform 1s;
     }
     #logo{
         display:flex;
         flex:wrap;
     }
-}
+   #button{
+
+    margin:10px 20%;}
+
+   }
 /***********************
        DESKTOP
 ***********************/
@@ -203,7 +349,6 @@ nav li a:hover{
     }
     nav li{    
         padding:0 30px;
-    
     }
     nav li a{
         font-size: 1.7rem;
@@ -212,13 +357,31 @@ nav li a:hover{
     }
     nav li a:hover{
         color:#D2A1CA;
-        transform: rotateX(360deg);
-        transition: transform 1s;
     }
     #logo{
         display:flex;
         flex:wrap;
-         
+    }
+    #button{
+        margin:10px 40%;
     }
 
-    }
+.about-container{
+    display:flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+#cakepop{
+   margin:20px;
+}
+#about-content{
+    width:40%;
+    padding:10px 20px;
+    margin:0 0 0 30px;
+}
+#about-button{
+    width: 100%;
+}
+
+}
