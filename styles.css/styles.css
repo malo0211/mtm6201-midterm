@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.7em;
 }
 ol, ul {
 	list-style: none;
@@ -55,7 +55,7 @@ body{
         DEFAULTS
 ***********************/
 
-/****** ABOUT colors
+/****** ABOUT colors******/
 .about-container{
     background: green;
 }  
@@ -70,8 +70,8 @@ body{
 }
 #about-button{
     background-color: blue;
-}******/
-/****** CONTACT colors******/
+}
+/****** CONTACT colors
 .contact-container{
     background: green;
 }
@@ -84,12 +84,12 @@ body{
 
 #socials{
     background: red;
-}
+}*****/
 /******^^^colors^^^^*****/
 
 .nav-container {
     background-color: #3B1646;
-    padding: 0 auto 10px;
+    padding: 0 10px;
 }
 
 body{
@@ -112,6 +112,7 @@ body{
     max-width: 72%;
     margin: 0 auto 10px;
     padding: 10px;
+    margin-top: 20px;
 }
 #logo:hover{
     animation: rotation .5s infinite linear;
@@ -135,7 +136,7 @@ body{
     width:100%;
 }
 #home-info{
-    line-height: 30px;
+    line-height: 1.7em;
 }
 #tagline{
     padding:18px 0;
@@ -144,7 +145,8 @@ body{
 }
 
 #cakepop{
-    width:100%;
+    max-width:1080px;
+    box-shadow: 9px 9px #A4D4A0;
 }
 
 h1{
@@ -154,6 +156,7 @@ h1{
 h2{
     font-size:2rem;
     color:#A4D4A0;
+    padding:0 0 10px 0;
 }
 h3{
     font-size:1.5rem;
@@ -165,6 +168,11 @@ h4{
     padding:10px 0;
     color:#A4D4A0;
 }
+p, li{
+    color:#A4D4A0;
+    font-size: 16px;
+}
+
 footer{
     color:#A4D4A0;
     bottom:0;
@@ -177,11 +185,12 @@ footer{
     display:flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #D2A1CA, #87489C);
-    color:#A4D4A0;
+    background: linear-gradient(to bottom right, #A4D4A0, #87489C);
+    color:#F2D852;
+    text-shadow: 1px 1px #3B1646;
     border: 0;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 20px;
+    font-size: 22px;
     padding:10px;
     text-decoration: none;
     transition-property: all;
@@ -192,7 +201,7 @@ footer{
 }
 
 #button:hover{
-    background: linear-gradient(to bottom right, #87489C, #D2A1CA);
+    background: linear-gradient(to bottom right, #87489C, #A4D4A0);
     transform: skew(5deg,-10deg);
 }
 
@@ -202,7 +211,9 @@ footer{
     flex-direction: column;
     margin-left:20px;
 }
-
+#contact-info{
+    line-height: 1.7em;
+}
 
 input[type=text], select, textarea {
     width: 100%;
@@ -215,12 +226,13 @@ input[type=text], select, textarea {
   }
   
 input[type=submit] {
-    background: linear-gradient(to bottom left, #D2A1CA, #87489C);
-    color:#A4D4A0;
+    background: linear-gradient(to bottom left, #A4D4A0, #87489C);
+    color:#F2D852;
+    text-shadow: 1px 1px #3B1646;
     font-size:16px;
     padding: 12px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-out;
@@ -229,7 +241,7 @@ input[type=submit] {
   }
   
 input[type=submit]:hover {
-    background: linear-gradient(to bottom left, #87489C, #D2A1CA);
+    background: linear-gradient(to bottom left, #87489C, #A4D4A0);
     transform: skew(5deg,-10deg);
   }
   
@@ -239,9 +251,15 @@ input[type=submit]:hover {
     margin: 20px 0;
     max-width: 400px;
   }
+.form label{
+    color:#A4D4A0
+}
 
 #socials{
     text-align: center;
+}
+svg{
+    fill:#A4D4A0;
 }
 /***********************
         MOBILE
@@ -275,12 +293,16 @@ nav li a:hover{
 #about-content{
     height:100%;
 }
+#cakepop{
+    margin:20px;
+    width:100%;
+}
 #button{
     margin:10px 20%;
 }
 
 #contact-info{
-    padding:20px;
+    padding:20px 0;
 }
 
 #socials{
@@ -323,11 +345,13 @@ nav li a:hover{
     }
     #logo{
         display:flex;
-        flex:wrap;
+        flex-wrap: wrap;
     }
    #button{
-
     margin:10px 20%;}
+
+    #cakepop{
+        margin:20px;}
 
    }
 /***********************
@@ -354,34 +378,55 @@ nav li a:hover{
         font-size: 1.7rem;
         text-decoration: none;
         color: #A4D4A0;
-    }
-    nav li a:hover{
-        color:#D2A1CA;
-    }
+       }
+    nav li a:hover{ 
+        animation-name: fade; 
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;}
+        @keyframes fade{
+            from {color: #A4D4A0;}
+            to {color:#D2A1CA;}
+          }
+        }
+
     #logo{
         display:flex;
-        flex:wrap;
+        flex-wrap:wrap;
     }
     #button{
-        margin:10px 40%;
+            margin:10px 40%;
+        }
+
+    .about-container{
+        display:flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        justify-content: center;
+    }
+    #cakepop{
+       margin:20px;
+    }
+    #about-content{
+        padding:10px 20px;
+        margin:0 0 0 30px;
+
+    }
+    #about-button{
+        width: 100%;
     }
 
-.about-container{
-    display:flex;
-    flex-flow: row wrap;
-    align-content: space-between;
-    justify-content: center;
-}
-#cakepop{
-   margin:20px;
-}
-#about-content{
-    width:40%;
-    padding:10px 20px;
-    margin:0 0 0 30px;
-}
-#about-button{
-    width: 100%;
-}
-
+    .contact-container{
+        display:flex;
+        flex-flow: row wrap;
+        align-content: center;
+        justify-content: center;
+    }
+    #contact-info{
+       padding:20px;
+    
+    }
+    #socials{
+        width:100%;
+    }
 }
