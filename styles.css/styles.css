@@ -55,7 +55,7 @@ body{
         DEFAULTS
 ***********************/
 
-/****** ABOUT colors******/
+/****** ABOUT colors
 .about-container{
     background: green;
 }  
@@ -81,11 +81,14 @@ body{
 .form{
     background:orange;
 }
-
+#poppyboy{
+    background-color: cornflowerblue;
+}
 #socials{
     background: red;
-}*****/
-/******^^^colors^^^^*****/
+}
+
+^^^colors^^^^*****/
 
 .nav-container {
     background-color: #3B1646;
@@ -110,30 +113,31 @@ body{
 }
 .contact-container{
     max-width: 72%;
-    margin: 0 auto 10px;
     padding: 10px;
     margin-top: 20px;
 }
 #logo:hover{
     animation: rotation .5s infinite linear;
-  }
+    }
    @keyframes rotation {
- 25% {
-        transform: rotate(-10deg);
-      }
-50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
- 
-}
+        25% {
+            transform: rotate(-10deg);
+            }
+        50% {
+        transform: rotate(0deg);
+            }
+        75% {
+        transform: rotate(10deg);
+            }
+        100% {
+        transform: rotate(0deg);
+            }
+    }
 #illustration{
     width:100%;
+    border:0;
+    box-shadow: 9px 9px #FFE370;
+    margin: 20px 0;
 }
 #home-info{
     line-height: 1.7em;
@@ -143,29 +147,35 @@ body{
     text-align:center;
     font-style: italic;
 }
-
-#cakepop{
+#cakepop-photo{
     max-width:1080px;
-    box-shadow: 9px 9px #A4D4A0;
+    box-shadow: 9px 9px #FFE370;
 }
-
+#tray-photo{
+    max-width:1080px;
+    box-shadow: 9px 9px #82BF9F;
+}
 h1{
     font-size:2.5rem;
     color:#A4D4A0;
+    line-height: 1.2em;
 }
 h2{
     font-size:2rem;
     color:#A4D4A0;
-    padding:0 0 10px 0;
+    line-height: 1em;
+    padding:10px 0 10px 0;
 }
 h3{
     font-size:1.5rem;
+    line-height: 1em;
     padding:10px 0;
     color:#A4D4A0;
 }
 h4{
     font-size: 1.2rem;
     padding:10px 0;
+    line-height: 1.5em;
     color:#A4D4A0;
 }
 p, li{
@@ -174,24 +184,23 @@ p, li{
 }
 
 footer{
-    color:#A4D4A0;
+    color:#3B1646;
     bottom:0;
-    width:100%;
     height:50px;
-    padding:10px 14% 0;
+    padding: 0 14% 10px;
+    background-color: #D2A1CA;
+    display:flex;
+    align-items: flex-end;
 }
-
 #button{
     display:flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom right, #A4D4A0, #87489C);
-    color:#F2D852;
-    text-shadow: 1px 1px #3B1646;
+    background: #A4D4A0;
+    color:#3B1646;
     border: 0;
     border-radius: 20px;
     font-size: 22px;
-    padding:10px;
+    padding:12px;
     text-decoration: none;
     transition-property: all;
     transition-duration: 1s;
@@ -201,8 +210,8 @@ footer{
 }
 
 #button:hover{
-    background: linear-gradient(to bottom right, #87489C, #A4D4A0);
-    transform: skew(5deg,-10deg);
+    background: #A4D4A0);
+    transform: skew(-50deg,0);
 }
 
 #acco-list{
@@ -213,6 +222,7 @@ footer{
 }
 #contact-info{
     line-height: 1.7em;
+    display: flex;
 }
 
 input[type=text], select, textarea {
@@ -226,37 +236,30 @@ input[type=text], select, textarea {
   }
   
 input[type=submit] {
-    background: linear-gradient(to bottom left, #A4D4A0, #87489C);
-    color:#F2D852;
-    text-shadow: 1px 1px #3B1646;
+    background:#A4D4A0;
+    color:#3B1646;
     font-size:16px;
     padding: 12px 20px;
     border: none;
     border-radius: 20px;
     transition-property: all;
     transition-duration: 1s;
-    transition-timing-function: ease-out;
-    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
     transform:skew(0,0);
   }
   
 input[type=submit]:hover {
-    background: linear-gradient(to bottom left, #87489C, #A4D4A0);
-    transform: skew(5deg,-10deg);
+    background: #A4D4A0);
+    transform: skew(-40deg,0);
   }
   
 .form {
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px 0;
     max-width: 400px;
-  }
+    min-width: 200px;}
+
 .form label{
     color:#A4D4A0
-}
-
-#socials{
-    text-align: center;
 }
 svg{
     fill:#A4D4A0;
@@ -284,46 +287,56 @@ nav li a{
     color: #A4D4A0;
 }
 nav li a:hover{
+    text-decoration:1px underline;
     color:#D2A1CA;
 }
-
 #logo{
     display:flex;
 }
-#about-content{
-    height:100%;
+.about-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#cakepop{
-    margin:20px;
-    width:100%;
+#tray-photo{
+    display: none;
 }
 #button{
-    margin:10px 20%;
+    margin:10px auto;
+    width: 100%;
 }
-
+.contact-container{
+    margin:0 auto;
+}
 #contact-info{
-    padding:20px 0;
+    display:flex;
+    flex-direction: column;
 }
-
 #socials{
+    padding:20px 0 0 0;
     text-align: center;
 }
 #socials svg{
     width: 50px;
 }
+#poppyboy{
+    display: none;
+}
+
 }
 /***********************
         TABLET
 ***********************/
-@media screen and (min-width: 480px) and (max-width: 768px){
+@media screen and (min-width: 480px) and (max-width: 767px){
 
     nav{
-        padding:20px;
+        padding:20px 30px 0 20px;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items:flex-end;
-        justify-content: center;
+        justify-content:center;
      }
     nav ul{
         padding-top: 20px;
@@ -332,8 +345,6 @@ nav li a:hover{
     }
     nav li{    
         padding:30px;
-        display:flex;
-        flex-direction: row;
     }
     nav li a{
         font-size: 1.7rem;
@@ -341,17 +352,40 @@ nav li a:hover{
         color: #A4D4A0;
     }
     nav li a:hover{
+        text-decoration:1px underline;
         color:#D2A1CA;
-    }
+    }    
+  
     #logo{
         display:flex;
         flex-wrap: wrap;
     }
-   #button{
-    margin:10px 20%;}
-
-    #cakepop{
-        margin:20px;}
+    #button{
+        margin:10px auto;
+    }
+    #tray-photo{
+        display: none;
+    }
+    .contact-container{
+        margin:0 auto 2rem;
+    }
+    #contact-info{
+        margin:0 auto;
+    }
+    #contact-info2{
+        margin: auto;
+    }
+    .form{
+        margin:0 auto;
+    }
+    #poppyboy{
+        width: 200px;
+        padding: 0 20px 0 0;
+    }
+    #socials{
+        padding:40px 0 0 0;
+        text-align: center;
+    }
 
    }
 /***********************
@@ -378,55 +412,69 @@ nav li a:hover{
         font-size: 1.7rem;
         text-decoration: none;
         color: #A4D4A0;
-       }
+    }
     nav li a:hover{ 
+        text-decoration:1px underline;
         animation-name: fade; 
         animation-iteration-count: infinite;
-        animation-duration: 1s;
+        animation-duration: 2s;
         animation-timing-function: ease-in-out;}
         @keyframes fade{
-            from {color: #A4D4A0;}
-            to {color:#D2A1CA;}
-          }
+            0% {color: #A4D4A0;}
+            50% {color:#D2A1CA;}
+            100% {color: #A4D4A0;}
         }
-
     #logo{
         display:flex;
         flex-wrap:wrap;
     }
-    #button{
-            margin:10px 40%;
-        }
-
     .about-container{
-        display:flex;
-        flex-flow: row wrap;
-        align-content: space-between;
-        justify-content: center;
+        display:grid;
+        grid-template-columns: repeat(2,2fr);
+        gap: 10px; 
     }
-    #cakepop{
-       margin:20px;
+    #cakepop-photo{
+        margin: 30px 10px 0 0;
+    }
+    #tray-photo{
+        margin: 30px 10px 0 0;
     }
     #about-content{
-        padding:10px 20px;
-        margin:0 0 0 30px;
-
-    }
-    #about-button{
-        width: 100%;
+        padding:10px ;
+        max-width:400px; 
     }
 
-    .contact-container{
-        display:flex;
-        flex-flow: row wrap;
-        align-content: center;
-        justify-content: center;
-    }
-    #contact-info{
-       padding:20px;
-    
-    }
     #socials{
         width:100%;
     }
+    #poppyboy{
+        width:200px;
+        margin:2rem 0 2rem 0;
+        transform: rotate(0deg);
+        transition: transform 1s;
+    }
+    #poppyboy:hover{
+        transform:rotate(720deg);
+    }
+    .contact-container{
+        margin:24px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #contact-info{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-right:20px;
+    }
+    .form{
+        padding: 0 20px;
+    }
+   
+    #socials{
+        text-align: center;
+        margin-top:30px;
+    }
+
 }
