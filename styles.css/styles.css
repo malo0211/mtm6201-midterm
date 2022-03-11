@@ -80,7 +80,7 @@ body{
 #logo:hover{
     animation: rotation .5s infinite linear;
     }
-   @keyframes rotation {
+    @keyframes rotation {
         25% {
             transform: rotate(-10deg);
             }
