@@ -148,7 +148,7 @@ footer{
     bottom:0;
     height:50px;
     padding: 0 14% 10px;
-    background-color: #D2A1CA;
+    background-color: #82bf9f;
     display:flex;
     align-items: flex-end;
 }
@@ -280,7 +280,7 @@ svg{
         display: none;
     }
     hr{
-        border: 2px solid #82BF9F;
+        border: 2px solid #A4D4A0;
         border-radius: 5px;
         margin:30px 0;
     }
@@ -410,7 +410,7 @@ svg{
     }
     #poppyboy{
         width:200px;
-        margin:2rem 0 2rem 0;
+        margin:2rem 2rem 2rem 0;
         transform: rotate(0deg);
         transition: transform 1s;
     }
@@ -426,6 +426,7 @@ svg{
     }
     #contact-info{
         display: flex;
+        padding-left:20px;
         flex-direction: column-reverse;
         justify-content: center;
     }
